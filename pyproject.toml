@@ -23,8 +23,9 @@ classifiers = [
 ]
 dependencies = []
 
-[project.urls]
-Homepage = "https://github.com/Dilmoq/basketopt"
+[project.scripts]
+basketopt = "basketopt.cli:main"
+
 
 [project.optional-dependencies]
 dev = ["pytest>=8.0,<9.0", "ruff>=0.6"]
