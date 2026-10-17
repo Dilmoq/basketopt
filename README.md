@@ -46,13 +46,17 @@ Canonical item DB: each product is stored with normalized attributes
 a tunable fuzzy threshold (≈ 0.75). Anything below the threshold lands in a
 review queue and is matched once by hand — after that it works forever.
 
-## Run
+## Try it (CLI)
 
 ```bash
 pip install -e ".[dev]"
-pytest tests -v
-ruff check src tests
+basketopt seed                          # creates basketopt.db with sample items/prices
+basketopt optimize --basket "молоко простоквашино 3.2% 930мл,яйцо куриное C1 10шт,гречка 1 кг"
 ```
+
+Output shows the best store (or split), per-store subtotals, delivery fees and
+savings vs. the best single-store option.
+
 
 ## License
 
