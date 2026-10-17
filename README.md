@@ -61,3 +61,13 @@ savings vs. the best single-store option.
 ## License
 
 MIT — see [LICENSE](LICENSE).
+
+
+## Run (web)
+
+```bash
+pip install -e ".[dev,web]"
+basketopt seed
+uvicorn basketopt.web:app --reload
+# open http://127.0.0.1:8000
+```
